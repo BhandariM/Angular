@@ -1,0 +1,12 @@
+<p>servers works!</p>
+<h6>{{world}}</h6>
+<app-server *ngFor = "let server of servers"></app-server>
+<input type="text" (input)="onServerUpdate($event)">
+<br>
+<input type="text" [(ngModel)]="serverName">
+<!-- <p>{{serverName}}</p> -->
+<br>
+<button class = "btn btn-primary" [disabled] = "!allowServer" (click)="onBtnClick()" >Minnu</button>
+<p *ngIf = "serverCreated">show when button is clicked {{serverName}}</p>
+
+<p>{{serverCreation}}</p>
